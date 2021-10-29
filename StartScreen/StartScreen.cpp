@@ -41,8 +41,6 @@ void noCursorType()
 	Info.dwSize = 20;
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &Info);
 }
-
-
 //***************************************************************************
 // ******************************* Vẽ logo **********************************
 // x: Hoành độ
@@ -149,7 +147,7 @@ void drawTitle(int x0, int y0, int color)
 		fi >> x >> y;
 		goToXY(x0 + x, y0 + y);
 		cout << char(254);
-		Sleep(8);
+		Sleep(6);
 	}
 
 	textcolor(15);
@@ -167,7 +165,7 @@ void startScreen(int x0, int y0)
 
 	// Vẽ xe:
 	PlaySound(TEXT("Car.wav"), NULL, SND_ASYNC);
-	carRight3move(0, y0 + 5, 164, 18);
+	carRight3move(0, y0 + 5, 164, 15);
 
 	// Vẽ đường nằm ngang:
 	textcolor(151);
